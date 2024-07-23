@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "80:80"
+    environment:
+      WORDPRESS_DB_HOST: terraform-20240723083552366500000001.cryckq88mfp6.eu-central-1.rds.amazonaws.com
+      WORDPRESS_DB_USER: Priyansh
+      WORDPRESS_DB_PASSWORD: Priyansh
+      WORDPRESS_DB_NAME: WordpressDB
+    volumes:
+      - wordpress_data:/var/www/html
+
+volumes:
+  wordpress_data:
